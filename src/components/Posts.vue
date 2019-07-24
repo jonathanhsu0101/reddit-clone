@@ -52,9 +52,9 @@ export default {
       fetch(url)
         .then(response => response.json())
         .then((result) => {
-          result.data.children.forEach(child => {
-            child.showImage= false;
-          })
+          result.data.children.forEach((child) => {
+            child.showImage = false;
+          });
           this.posts = result.data.children;
         });
     },
@@ -66,7 +66,7 @@ export default {
     },
     isImage(post) {
       return post.data.url.match(/\.(jpg|png|jpeg|bmp)$/);
-    }
+    },
   },
 };
 </script>
